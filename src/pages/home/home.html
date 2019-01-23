@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      GalaPro
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary">URL</ion-label>
+        <ion-input placeholder="Enter URL" type="text" [(ngModel)]="inputURL" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>redirect</ion-label>
+        <ion-checkbox [(ngModel)]="redirectCB"></ion-checkbox>
+      </ion-item>
+      <button ion-button (click)='openWindow($event)' type="submit" block>Submit</button>
+    </ion-list>
+  <ion-label color="primary"  ngDefaultControl>{{errorMessage}}</ion-label>
+
+
+  <button ion-button (click)='sendMessage($event)'  block>chat</button>
+</ion-content>
